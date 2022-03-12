@@ -1,5 +1,6 @@
+@import "reset.css";
+
 body {
-    /* background-color: red; */
     color: red;
     font-size: 30px;
 }
@@ -14,9 +15,15 @@ body {
     transform: translate(-50%,-50%);
     border-radius: 30px; */
 /* } */
+
+.container {
+    background-image: linear-gradient(45deg, blue, red);
+    padding: 30px;
+    display: flex;
+}
+
 .odo_container {
     margin-left: 5%;
-    display: inline-block;
     /* width: 40%; */
     position: relative;
     height: 100%;
@@ -25,11 +32,11 @@ body {
 .zzase_input_box {
     margin-left: 30px;
 }
-#zzase_title {
+
+.zzase_title {
     margin: 0;
     margin-bottom: 10px;
     font-weight: bold;
-    /* color: red; */
 }
 .zzase_input {
     font-size: 30px;
@@ -48,7 +55,6 @@ body {
     background-color: white;
     color: red;
 }
-
 
 #odo_zzase_gihab_name {
     font-weight: bold;

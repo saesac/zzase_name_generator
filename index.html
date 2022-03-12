@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="odo_container" id="zzase_generator">
-            <span id="zzase_title">짜세 이름 생성기</span>
+            <span class="title">짜세 이름 생성기</span>
                 <div style="margin-bottom: 30px;">
                     <div class="zzase_input_box">
                         <input class="zzase_input" id="zzase_year" type="text" size="7" dir="rtl" value="1949"
@@ -101,25 +101,33 @@
     </div>
     <script src="assets/JS/zzase.js"></script>
     <script>
-        var first_name = ["황","김","박","전","노","풍","도","흥","봉","장","현","남"]
-        var middle_name = ["근","무","경","득","삼","구","창","현","평","판","달","봉"]
-        var last_name = ["출","걸","필","팔","상","칠","장","봉","남","태","현","붕","두","질","귀","능","묵","쇠","방","알","동","지","배","패","록","접","찰","점","닥","틀","례"]
-        document.getElementById("generate_zzase_name").onclick =  function() {
-            var s = ""
-            var name = document.getElementById("odo_zzase_gihab_name");
-            var year =  document.getElementById("zzase_year").value * 1;
+        const first_name = ["황","김","박","전","노","풍","도","흥","봉","장","현","남"]
+        const middle_name = ["근","무","경","득","삼","구","창","현","평","판","달","봉"]
+        const last_name = ["출","걸","필","팔","상","칠","장","봉","남","태","현","붕","두","질","귀","능","묵","쇠","방","알","동","지","배","패","록","접","찰","점","닥","틀","례"]
+        
+        const generateBtn = getElementById("generate_zzase_name")
+        const copyBtn = getElementById("btn_text_copy")
+
+        function geneOnclick() {
+            let s = ""
+            let name = document.getElementById("odo_zzase_gihab_name");
+            let year =  document.getElementById("zzase_year").value * 1;
             console.log((year))
-            var s = s + (first_name[(year % 100)%89%11]+"");
-            var month = document.getElementById("zzase_month").value * 1;
-            var s = s + (middle_name[(month-1) % 12]+"");
-            var day = document.getElementById("zzase_day").value * 1;
-            var s = s + (last_name[(day-1) % 31]+"");
+
+            s = s + (first_name[(year % 100)%89%11]+"");
+            let month = document.getElementById("zzase_month").value * 1;
+            s = s + (middle_name[(month-1) % 12]+"");
+            let day = document.getElementById("zzase_day").value * 1;
+            s = s + (last_name[(day-1) % 31]+"");
             console.log(s)
+
             name.innerText = s;
         }
-        document.getElementById("btn_text_copy").onclick = function copy_password() {
-            var copyText = document.getElementById("odo_zzase_gihab_name");
-            var textArea = document.createElement("textarea");
+
+        function copyOnclick() {
+            let copyText = document.getElementById("odo_zzase_gihab_name");
+            let textArea = document.createElement("textarea");
+            
             textArea.value = copyText.textContent + " 해병님";
             document.body.appendChild(textArea);
             textArea.select();
@@ -127,6 +135,9 @@
             textArea.remove();
             alert("새끼... 기합!");
         }
+        
+        generateBtn.addEventListener("click", geneOnclick);
+        copyBtn.addEventListener("click", copyOnclick);
     </script>
 </body>
 </html>
