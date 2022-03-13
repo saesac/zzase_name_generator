@@ -1,9 +1,8 @@
-@import "reset.css";
-
 body {
     background-image: url(../images/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     font-size: 30px;
+    display: flex;
 }
