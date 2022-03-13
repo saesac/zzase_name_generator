@@ -1,52 +1,9 @@
 @import "reset.css";
 
 body {
-    background-image: linear-gradient(45deg, blue, red);
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: 30px;
-}
-
-.container {
-    padding: 30px;
-    display: flex;
-}
-
-.odo_container {
-    margin-left: 5%;
-    position: relative;
-    height: 100%;
-    border-radius: 30px;
-}
-
-.title {
-    margin-bottom: 50px;
-    font-weight: bold;
-}
-.zzase_input_box {
-    margin-left: 30px;
-}
-
-.zzase_input {
-    font-size: 30px;
-    color: magenta;
-    
-}
-
-.zzase_button{
-    width: 200px;
-    font-size: 30px;
-    background-color: red;
-    color: white;
-}
-
-.zzase_button:hover {
-    background-color: white;
-    color: red;
-}
-
-#odo_zzase_gihab_name {
-    font-weight: bold;
-}
-
-#print_name {
-    padding : 15px 0 15px 0;
 }
