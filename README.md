@@ -1,4 +1,4 @@
-## 짜세 이름 생성기
+## 짜세 이름 생성기 (a.k.a 상놈 이름 생성기)
 * 재미있는 이름 생성기, [짜세 이름 생성기](https://saesac.github.io/zzase_name_generator/index.html)입니다.
 
 ## 사용법
