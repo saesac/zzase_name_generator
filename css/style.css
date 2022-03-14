@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: opacity(80%);
 }
 
 .inContainer {
@@ -21,7 +22,7 @@ body {
     height: 400px;
     padding: 30px;
     background-color: aliceblue;
-    border-radius: 15px;
+    border-radius: 30px;
 }
 
 .title {
@@ -31,12 +32,36 @@ body {
     margin-bottom: 25px;
 }
 
+.inputBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox {
+    margin: 10px;
+}
+
 .nameBox {
     padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    margin-left: 5px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
-    width: 100px;
+    width: 60px;
     height: 40px;
     background-color: white;
     border: 1px solid white;
@@ -53,7 +78,7 @@ button {
     background-color: white;
     border: 1px solid white;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin: 15px;
     font-size: 15px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
